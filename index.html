@@ -527,5 +527,17 @@
 
   <script src="js/vendor/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
+  <!-- Chatbot Button -->
+<div id="chatbot-container">
+  <button id="chatbot-btn">💬 Chat with Trek Assistant</button>
+</div>
+
+<!-- Chat Window -->
+<div id="chat-window" style="display:none;">
+  <div id="chat-log"></div>
+  <input type="text" id="user-input" placeholder="Ask about treks or fitness...">
+  <button onclick="sendMessage()">Send</button>
+</div>
+
 </body>
 </html>
