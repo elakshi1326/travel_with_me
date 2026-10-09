@@ -768,3 +768,26 @@ ul { margin: 0; }
 .js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
 .js .reveal.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .js .reveal { opacity: 1 !important; transform: none !important; } }
+#chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+#chat-window {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  overflow-y: auto;
+}
+#chat-log {
+  height: 320px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
