@@ -143,3 +143,34 @@
     initForms();
   });
 })();
+// === Chatbot Logic ===
+document.getElementById("chatbot-btn").onclick = function() {
+  let chatWindow = document.getElementById("chat-window");
+  chatWindow.style.display = chatWindow.style.display === "none" ? "block" : "none";
+};
+
+async function sendMessage() {
+  let input = document.getElementById("user-input").value;
+  let chatLog = document.getElementById("chat-log");
+
+  chatLog.innerHTML += "<p><b>You:</b> " + input + "</p>";
+
+  const response = await fetch("https://api.openai.com/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer YOUR_API_KEY" // Replace with your OpenAI key
+    },
+    body: JSON.stringify({
+      model: "gpt-3.5-turbo",
+      messages: [{ role: "user", content: input }]
+    })
+  });
+
+  const data = await response.json();
+  const reply = data.choices[0].message.content;
+
+  chatLog.innerHTML += "<p><b>Trek Assistant:</b> " + reply + "</p>";
+  document.getElementById("user-input").value = "";
+}
+
