@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voyage &mdash; Free Travel Guide &amp; Blog Template by uiCookies</title>
+  <meta name="description" content="Voyage is a free, wanderlust-styled travel guide and blog template built on Bootstrap 5 — destination guides, day-by-day itineraries, and a field-journal design. Dependency-free and easy to customize.">
+  <meta name="keywords" content="free travel template, travel blog template, travel guide website, bootstrap 5 travel theme, uicookies">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Voyage — Free Travel Guide & Blog Template">
+  <meta property="og:description" content="A field journal for slow travelers — destinations, itineraries and honest tips.">
+  <meta property="og:image" content="img/hero.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== SVG icon sprite (inline, CSP-safe) ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <g id="def-stroke" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></g>
+    </defs>
+    <symbol id="i-compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polygon points="16.2 7.8 13.4 13.4 7.8 16.2 10.6 10.6"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></symbol>
+    <symbol id="i-arrow-ur" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="8 7 17 7 17 16"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><line x1="4" y1="9.5" x2="20" y2="9.5"/><line x1="8" y1="3" x2="8" y2="6"/><line x1="16" y1="3" x2="16" y2="6"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></symbol>
+    <symbol id="i-backpack" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 9a5 5 0 0 1 10 0v9a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2z"/><path d="M9.5 9V6.5a2.5 2.5 0 0 1 5 0V9"/><path d="M7 14h10"/><path d="M10.5 14v3h3v-3"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12.5 9 17.5 20 6.5"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="4 7 12 13 20 7"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="12" y1="11" x2="12" y2="16"/><circle cx="12" cy="8" r="1" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="14" y2="17"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path fill="currentColor" d="M18.9 3H21l-6.6 7.5L22 21h-6l-4.7-6.1L5.8 21H3l7-8L3 3h6.1l4.2 5.6L18.9 3zm-2.1 16h1.6L7.3 4.6H5.6L16.8 19z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1.1" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-7h2.3l.4-2.8h-2.7V9.4c0-.8.2-1.3 1.4-1.3H16V5.6c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.1H7.8V14h2.3v7z"/></symbol>
+    <symbol id="i-yt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="3.5"/><polygon points="10.5 9.2 15.2 12 10.5 14.8" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.6 2.5 4 5.6 4 9s-1.4 6.5-4 9c-2.6-2.5-4-5.6-4-9s1.4-6.5 4-9z"/></symbol>
+  </svg>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="top">
+    <div class="wrap">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html">
+          <span class="mark"><svg aria-hidden="true"><use href="#i-compass"/></svg></span>
+          Voyage
+        </a>
+        <ul class="nav-menu">
+          <li><a href="#destinations" class="active">Destinations</a></li>
+          <li><a href="#guides">Guides</a></li>
+          <li><a href="#regions">Regions</a></li>
+          <li><a href="#author">About</a></li>
+          <li><a href="post.html">A Guide</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="icon-btn" type="button" aria-label="Search destinations"><svg aria-hidden="true"><use href="#i-search"/></svg></button>
+          <a href="#dispatch" class="btn btn-ink">Subscribe</a>
+          <button class="nav-toggle" type="button" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+            <svg aria-hidden="true"><use href="#i-menu"/></svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile nav panel -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <button class="mobile-close" type="button" id="navClose" aria-label="Close menu"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+    <a href="#destinations">Destinations</a>
+    <a href="#guides">Guides</a>
+    <a href="#regions">Regions</a>
+    <a href="#author">About</a>
+    <a href="post.html">Read a Guide</a>
+    <a href="#dispatch" class="btn btn-primary">Subscribe to The Dispatch</a>
+  </div>
+
+  <main id="main">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media">
+        <img src="img/hero.jpg" alt="Golden morning light over a jagged alpine valley with a winding trail below the peaks">
+      </div>
+      <div class="wrap hero-inner">
+        <span class="hero-badge"><span class="dot"></span> Field notes · Issue No. 47 · Spring 2026</span>
+        <h1 id="hero-title">Take the <em>long way</em> round.</h1>
+        <p class="hero-lead">Voyage is a travel journal for people who'd rather stay an extra day. Honest destination guides, walkable itineraries, and the small logistics nobody warns you about.</p>
+
+        <form class="search-card" role="search" aria-label="Find a destination guide">
+          <div class="search-field">
+            <label for="q-where"><svg aria-hidden="true"><use href="#i-pin"/></svg> Where to</label>
+            <input type="text" id="q-where" name="where" placeholder="Dolomites, Kyoto, Algarve…" autocomplete="off">
+          </div>
+          <div class="search-divider" aria-hidden="true"></div>
+          <div class="search-field">
+            <label for="q-region"><svg aria-hidden="true"><use href="#i-globe"/></svg> Region</label>
+            <select id="q-region" name="region">
+              <option value="">Anywhere</option>
+              <option>The Alps</option>
+              <option>Mediterranean Coast</option>
+              <option>East Asia</option>
+              <option>Patagonia &amp; the Andes</option>
+              <option>The Nordics</option>
+              <option>Southeast Asia</option>
+            </select>
+          </div>
+          <button class="btn btn-primary" type="submit"><svg aria-hidden="true"><use href="#i-search"/></svg> Find guides</button>
+        </form>
+
+        <div class="hero-trending">
+          <span class="lbl">Trending now:</span>
+          <a href="#destinations" class="chip">Dolomites</a>
+          <a href="#destinations" class="chip">Kyoto</a>
+          <a href="#destinations" class="chip">Lofoten</a>
+          <a href="#destinations" class="chip">Cape Town</a>
+          <a href="#destinations" class="chip">Patagonia</a>
+        </div>
+
+        <div class="hero-stats">
+          <div><div class="num">240+</div><div class="lbl">Guides written</div></div>
+          <div><div class="num">52</div><div class="lbl">Countries walked</div></div>
+          <div><div class="num">9 yrs</div><div class="lbl">On the road</div></div>
+          <div><div class="num">18k</div><div class="lbl">Dispatch readers</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Featured Destinations ===== -->
+    <section class="section" id="destinations" aria-labelledby="dest-title">
+      <div class="wrap">
+        <div class="section-head section-head--split reveal">
+          <div class="head-copy">
+            <span class="kicker">Featured destinations</span>
+            <h2 id="dest-title">Places worth the detour</h2>
+          </div>
+          <a href="#guides" class="textlink">Browse every guide <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+
+        <div class="featured-grid reveal">
+          <!-- Tall feature -->
+          <article class="dest-card dest-card--feature">
+            <div class="frame">
+              <img src="img/feat-1.jpg" alt="Sunlit limestone spires of the Dolomites rising above a green meadow">
+              <span class="tag">Mountains</span>
+            </div>
+            <div class="body">
+              <span class="coords">46.4°N · 11.8°E — Trentino, Italy</span>
+              <h3><a href="post.html">The Dolomites, in Slow Motion</a></h3>
+              <p>Three quiet days of rifugio lunches, cable-car shortcuts and the best sunrise in the Alps — no rush, no car.</p>
+              <div class="card-foot">
+                <span class="meta"><span class="meta-item"><svg aria-hidden="true"><use href="#i-clock"/></svg> 12 min read</span></span>
+                <span class="tag tag--sun">Editor's pick</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="dest-card">
+            <div class="frame">
+              <img src="img/feat-2.jpg" alt="Turquoise water below golden cliffs on a hidden Algarve beach">
+              <span class="tag">Beach</span>
+            </div>
+            <div class="body">
+              <span class="coords">37.1°N · 8.4°W — Algarve</span>
+              <h3><a href="post.html">Praia da Marinha at First Light</a></h3>
+              <div class="card-foot">
+                <span class="meta"><span class="meta-item"><svg aria-hidden="true"><use href="#i-clock"/></svg> 7 min</span></span>
+                <span class="coords">Portugal</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="dest-card">
+            <div class="frame">
+              <img src="img/feat-3.jpg" alt="A narrow, lamplit old-town street winding between tall pastel buildings">
+              <span class="tag">City</span>
+            </div>
+            <div class="body">
+              <span class="coords">38.7°N · 9.1°W — Lisbon</span>
+              <h3><a href="post.html">Downhill Through Old Lisbon</a></h3>
+              <div class="card-foot">
+                <span class="meta"><span class="meta-item"><svg aria-hidden="true"><use href="#i-clock"/></svg> 9 min</span></span>
+                <span class="coords">Portugal</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="dest-card">
+            <div class="frame">
+              <img src="img/feat-4.jpg" alt="Red desert canyon walls glowing at dusk under a wide sky">
+              <span class="tag">Desert</span>
+            </div>
+            <div class="body">
+              <span class="coords">29.6°N · 35.4°E — Wadi Rum</span>
+              <h3><a href="post.html">A Night Under Wadi Rum</a></h3>
+              <div class="card-foot">
+                <span class="meta"><span class="meta-item"><svg aria-hidden="true"><use href="#i-clock"/></svg> 8 min</span></span>
+                <span class="coords">Jordan</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="dest-card">
+            <div class="frame">
+              <img src="img/feat-5.jpg" alt="A still mountain lake mirroring pine forest and distant peaks">
+              <span class="tag">Lakes</span>
+            </div>
+            <div class="body">
+              <span class="coords">47.6°N · 13.6°E — Salzkammergut</span>
+              <h3><a href="post.html">Lake Days in Hallstatt</a></h3>
+              <div class="card-foot">
+                <span class="meta"><span class="meta-item"><svg aria-hidden="true"><use href="#i-clock"/></svg> 10 min</span></span>
+                <span class="coords">Austria</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Latest Guides ===== -->
+    <section class="section guides" id="guides" aria-labelledby="guides-title">
+      <div class="wrap">
+        <div class="section-head section-head--split reveal">
+          <div class="head-copy">
+            <span class="kicker">Fresh off the trail</span>
+            <h2 id="guides-title">The latest guides</h2>
+          </div>
+          <a href="#" class="textlink">All 240 guides <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+
+        <div class="guide-list reveal">
+          <article class="guide-row">
+            <a class="guide-thumb" href="post.html" aria-label="Read: Seven Days Along the Amalfi Coast Without a Car">
+              <img src="img/guide-1.jpg" alt="A pastel coastal town clinging to steep cliffs above the sea">
+              <span class="num">01</span>
+            </a>
+            <div class="guide-body">
+              <div class="guide-tags"><span class="tag">Itinerary</span> <span class="tag tag--sun">Coast</span></div>
+              <h3><a href="post.html">Seven Days Along the Amalfi Coast Without a Car</a></h3>
+              <p>Ferries, the SITA bus and a very good pair of shoes. How to do the whole coast — Sorrento to Salerno — on public transport, and why it beats renting.</p>
+              <div class="meta">
+                <span class="meta-item"><svg aria-hidden="true"><use href="#i-calendar"/></svg> Mar 14, 2026</span>
+                <span class="meta-item"><svg aria-hidden="true"><use href="#i-clock"/></svg> 11 min</span>
+                <span class="meta-item">By Maren Holt</span>
+              </div>
+            </div>
+            <div class="guide-cta">
+              <a href="post.html" class="arrow-round" aria-label="Read the Amalfi Coast guide"><svg aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+            </div>
+          </article>
+
+          <article class="guide-row">
+            <a class="guide-thumb" href="post.html" aria-label="Read: A First-Timer's Week in Kyoto's Temple Districts">
+              <img src="img/guide-2.jpg" alt="A wooden temple gate framed by autumn maple leaves">
+              <span class="num">02</span>
+            </a>
+            <div class="guide-body">
+              <div class="guide-tags"><span class="tag">City</span> <span class="tag">Culture</span></div>
+              <h3><a href="post.html">A First-Timer's Week in Kyoto's Temple Districts</a></h3>
+              <p>Higashiyama at dawn, Arashiyama by bicycle, and where to eat between the shrines. A gentle first week that skips the crowds and the tourist traps.</p>
+              <div class="meta">
+                <span class="meta-item"><svg aria-hidden="true"><use href="#i-calendar"/></svg> Mar 2, 2026</span>
+                <span class="meta-item"><svg aria-hidden="true"><use href="#i-clock"/></svg> 14 min</span>
+                <span class="meta-item">By Theo Marchetti</span>
+              </div>
+            </div>
+            <div class="guide-cta">
+              <a href="post.html" class="arrow-round" aria-label="Read the Kyoto guide"><svg aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+            </div>
+          </article>
+
+          <article class="guide-row">
+            <a class="guide-thumb" href="post.html" aria-label="Read: Island-Hopping the Cyclades on a Ferry Pass">
+              <img src="img/guide-3.jpg" alt="A whitewashed island village above a bright blue bay">
+              <span class="num">03</span>
+            </a>
+            <div class="guide-body">
+              <div class="guide-tags"><span class="tag tag--sun">Beach</span> <span class="tag">Budget</span></div>
+              <h3><a href="post.html">Island-Hopping the Cyclades on a Ferry Pass</a></h3>
+              <p>Six islands, twelve days, one deck ticket at a time. Real ferry timings, which islands to skip in July, and where €40 still buys a room with a view.</p>
+              <div class="meta">
+                <span class="meta-item"><svg aria-hidden="true"><use href="#i-calendar"/></svg> Feb 20, 2026</span>
+                <span class="meta-item"><svg aria-hidden="true"><use href="#i-clock"/></svg> 13 min</span>
+                <span class="meta-item">By Maren Holt</span>
+              </div>
+            </div>
+            <div class="guide-cta">
+              <a href="post.html" class="arrow-round" aria-label="Read the Cyclades guide"><svg aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+            </div>
+          </article>
+
+          <article class="guide-row">
+            <a class="guide-thumb" href="post.html" aria-label="Read: Hut-to-Hut Hiking in the Julian Alps">
+              <img src="img/guide-4.jpg" alt="A small mountain village of stone houses beneath green summer peaks">
+              <span class="num">04</span>
+            </a>
+            <div class="guide-body">
+              <div class="guide-tags"><span class="tag">Mountains</span> <span class="tag">Hiking</span></div>
+              <h3><a href="post.html">Hut-to-Hut Hiking in the Julian Alps</a></h3>
+              <p>Slovenia's quiet answer to the Dolomites. A four-day traverse with warm huts, cheap goulash, and a summit you can actually reach without ropes.</p>
+              <div class="meta">
+                <span class="meta-item"><svg aria-hidden="true"><use href="#i-calendar"/></svg> Feb 8, 2026</span>
+                <span class="meta-item"><svg aria-hidden="true"><use href="#i-clock"/></svg> 10 min</span>
+                <span class="meta-item">By Maren Holt</span>
+              </div>
+            </div>
+            <div class="guide-cta">
+              <a href="post.html" class="arrow-round" aria-label="Read the Julian Alps guide"><svg aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Popular Regions ===== -->
+    <section class="section" id="regions" aria-labelledby="regions-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">Popular regions</span>
+          <h2 id="regions-title">Start with a corner of the map</h2>
+          <p>Every guide is filed by region, so you can plan a whole trip without twenty browser tabs.</p>
+        </div>
+
+        <div class="regions-grid reveal">
+          <a class="region-card" href="#guides">
+            <img src="img/region-alps.jpg" alt="Snow-dusted alpine peaks under a clear sky">
+            <span class="go"><svg aria-hidden="true"><use href="#i-arrow-ur"/></svg></span>
+            <div class="region-body">
+              <h3>The Alps</h3>
+              <span class="count"><b>24</b> guides · 6 countries</span>
+            </div>
+          </a>
+          <a class="region-card" href="#guides">
+            <img src="img/region-coast.jpg" alt="A sweep of Mediterranean coastline meeting clear blue water">
+            <span class="go"><svg aria-hidden="true"><use href="#i-arrow-ur"/></svg></span>
+            <div class="region-body">
+              <h3>Mediterranean</h3>
+              <span class="count"><b>18</b> guides · 9 countries</span>
+            </div>
+          </a>
+          <a class="region-card" href="#guides">
+            <img src="img/region-asia.jpg" alt="A dense city skyline glowing at blue hour">
+            <span class="go"><svg aria-hidden="true"><use href="#i-arrow-ur"/></svg></span>
+            <div class="region-body">
+              <h3>East Asia</h3>
+              <span class="count"><b>16</b> guides · 4 countries</span>
+            </div>
+          </a>
+          <a class="region-card" href="#guides">
+            <img src="img/region-andes.jpg" alt="Jagged Patagonian mountains rising over open grassland">
+            <span class="go"><svg aria-hidden="true"><use href="#i-arrow-ur"/></svg></span>
+            <div class="region-body">
+              <h3>Patagonia</h3>
+              <span class="count"><b>11</b> guides · 2 countries</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Plan Your Trip band ===== -->
+    <section class="section plan" id="plan" aria-labelledby="plan-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">Plan your trip</span>
+          <h2 id="plan-title">Three steps from daydream to departure</h2>
+          <p>No affiliate clutter, no 40-tab research spirals. Voyage guides are built to be used in this order.</p>
+        </div>
+        <div class="plan-grid reveal">
+          <div class="plan-step">
+            <div class="step-icon"><svg aria-hidden="true"><use href="#i-compass"/></svg></div>
+            <span class="step-no">Step 01</span>
+            <h3>Pick the season</h3>
+            <p>Every guide opens with a month-by-month chart — crowd levels, weather and price — so you go when it's actually good, not just when you're free.</p>
+          </div>
+          <div class="plan-step">
+            <div class="step-icon"><svg aria-hidden="true"><use href="#i-map"/></svg></div>
+            <span class="step-no">Step 02</span>
+            <h3>Map the route</h3>
+            <p>Day-by-day itineraries with real transit times and walkable distances. Copy ours, or remix it into your own loop with the notes provided.</p>
+          </div>
+          <div class="plan-step">
+            <div class="step-icon"><svg aria-hidden="true"><use href="#i-backpack"/></svg></div>
+            <span class="step-no">Step 03</span>
+            <h3>Pack light, go slow</h3>
+            <p>Region-specific packing lists and a one-bag philosophy. Fewer things to carry means more time looking up at where you actually are.</p>
+          </div>
+        </div>
+        <div class="plan-cta reveal">
+          <a href="post.html" class="btn btn-primary">See a sample itinerary <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a href="#dispatch" class="btn btn-ghost-light">Get the trip-planning kit</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About the Author ===== -->
+    <section class="section author" id="author" aria-labelledby="author-title">
+      <div class="wrap">
+        <div class="author-grid">
+          <div class="author-portrait reveal">
+            <div class="photo"><img src="img/author.jpg" alt="Portrait of Maren Holt, founder and lead writer of Voyage"></div>
+            <div class="pin">
+              <svg aria-hidden="true"><use href="#i-pin"/></svg>
+              <div>
+                <div class="t">Currently in</div>
+                <div class="v">Turin, Italy</div>
+              </div>
+            </div>
+          </div>
+          <div class="author-copy reveal">
+            <span class="kicker">About the author</span>
+            <h2 id="author-title">I'm Maren — and I travel embarrassingly slowly.</h2>
+            <p>Nine years ago I quit a design job in Copenhagen, sold most of what I owned, and started writing down what I wished someone had told me before each trip. Voyage grew out of those notebooks.</p>
+            <p>I don't chase 30-countries-in-30-days. I'd rather learn one valley properly — the early bus, the family trattoria, the trailhead the guidebooks miss. Every guide here is walked before it's written.</p>
+            <p class="signature">Maren Holt</p>
+            <div class="author-stats">
+              <div><div class="num">52</div><div class="lbl">Countries</div></div>
+              <div><div class="num">9</div><div class="lbl">Years on the road</div></div>
+              <div><div class="num">240+</div><div class="lbl">Guides written</div></div>
+            </div>
+            <div class="author-social">
+              <a href="#" aria-label="Voyage on X"><svg aria-hidden="true"><use href="#i-x"/></svg></a>
+              <a href="#" aria-label="Voyage on Instagram"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
+              <a href="#" aria-label="Voyage on YouTube"><svg aria-hidden="true"><use href="#i-yt"/></svg></a>
+              <a href="#" aria-label="Voyage on Facebook"><svg aria-hidden="true"><use href="#i-fb"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Newsletter / Dispatch ===== -->
+    <section class="section dispatch" id="dispatch" aria-labelledby="dispatch-title">
+      <div class="wrap">
+        <div class="dispatch-card reveal">
+          <div class="dispatch-inner">
+            <span class="kicker">The Dispatch</span>
+            <h2 id="dispatch-title">One long letter from the road, once a month.</h2>
+            <p>No listicles, no "10 hacks". Just a new destination guide, a map, and the honest logistics — sent to 18,000 slow travelers on the first Sunday of every month.</p>
+            <form class="dispatch-form" aria-label="Subscribe to The Dispatch">
+              <label for="news-email" class="sr-only">Email address</label>
+              <input type="email" id="news-email" name="email" placeholder="you@example.com" required>
+              <button class="btn btn-ink" type="submit"><svg aria-hidden="true"><use href="#i-mail"/></svg> Subscribe free</button>
+            </form>
+            <p class="dispatch-note"><svg aria-hidden="true"><use href="#i-lock"/></svg> No spam, unsubscribe any time. Read by travelers in 74 countries.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <span class="mark"><svg aria-hidden="true"><use href="#i-compass"/></svg></span>
+            Voyage
+          </a>
+          <p>A field journal for people who travel slowly — honest destination guides, walkable itineraries and the logistics nobody warns you about.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Voyage on X"><svg aria-hidden="true"><use href="#i-x"/></svg></a>
+            <a href="#" aria-label="Voyage on Instagram"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
+            <a href="#" aria-label="Voyage on YouTube"><svg aria-hidden="true"><use href="#i-yt"/></svg></a>
+            <a href="#" aria-label="Voyage on Facebook"><svg aria-hidden="true"><use href="#i-fb"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#guides">Latest guides</a></li>
+            <li><a href="#regions">Regions</a></li>
+            <li><a href="#plan">Trip planner</a></li>
+            <li><a href="post.html">Sample guide</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Regions</h4>
+          <ul>
+            <li><a href="#regions">The Alps</a></li>
+            <li><a href="#regions">Mediterranean</a></li>
+            <li><a href="#regions">East Asia</a></li>
+            <li><a href="#regions">Patagonia</a></li>
+            <li><a href="#regions">The Nordics</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Latest dispatch</h4>
+          <div class="footer-recent">
+            <img src="img/guide-1.jpg" alt="">
+            <div>
+              <div class="rt">Seven Days Along the Amalfi Coast</div>
+              <div class="rd">Mar 14, 2026 · 11 min</div>
+            </div>
+          </div>
+          <div class="footer-recent">
+            <img src="img/guide-4.jpg" alt="">
+            <div>
+              <div class="rt">Hut-to-Hut in the Julian Alps</div>
+              <div class="rd">Feb 8, 2026 · 10 min</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Voyage. Crafted for wanderers.</div>
+        <div class="credit">Free template by <a href="https://uicookies.com/">uiCookies</a> · Demo photos via <a href="https://loremflickr.com/">LoremFlickr</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/vendor/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
