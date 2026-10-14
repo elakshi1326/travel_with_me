@@ -531,16 +531,42 @@
 <div id="chatbot-container">
   <button id="chatbot-btn">💬 Chat with Trek Assistant</button>
 </div>
+  ...
+<!-- Other page content -->
 
-<!-- Chat Window -->
-<div id="chat-window" style="display:none;">
-  <div id="chat-log"></div>
-  <input type="text" id="user-input" placeholder="Ask about treks or fitness...">
-  <button onclick="sendMessage()">Send</button>
+<!-- Chatbot UI -->
+<div id="chatbot"></div>
+<div>
+  <input type="text" id="userInput" placeholder="Ask me about trekking...">
+  <button onclick="askAI(document.getElementById('userInput').value)">Ask</button>
 </div>
-<script src="js/script.js"></script>
+
+<!-- Scripts -->
+<script src="js/script.js"></script> <!-- your existing template script -->
+<script>
+async function askAI(question) {
+  const response = await fetch("https://api.openai.com/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer YOUR_API_KEY" // replace with your key
+    },
+    body: JSON.stringify({
+      model: "gpt-3.5-turbo",
+      messages: [{ role: "user", content: question }]
+    })
+  });
+  const data = await response.json();
+  document.getElementById("chatbot").innerText = data.choices[0].message.content;
+}
+</script>
 </body>
 </html>
+<div>
+  <input type="text" id="userInput" placeholder="Ask me about trekking...">
+  <button onclick="askAI(document.getElementById('userInput').value)">Ask</button>
+</div>
+
 
 </body>
 </html>
